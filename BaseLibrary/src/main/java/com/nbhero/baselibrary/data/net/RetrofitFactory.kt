@@ -1,6 +1,6 @@
 package com.nbhero.baselibrary.data.net
 
-import com.nbhero.baselibrary.common.Constant
+import com.nbhero.baselibrary.common.BaseConstant
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -22,10 +22,22 @@ class RetrofitFactory private constructor(){
 
     private val retrofit:Retrofit
 
+    private val interceptor:Interceptor
+
     init {
 
+        interceptor = Interceptor {
+
+            it.proceed(it.request()
+                    .newBuilder()
+                    .addHeader("Content-Type", "application/json")
+                    .addHeader("charset", "utf-8")
+                    .build())
+
+        }
+
         retrofit = Retrofit.Builder()
-                .baseUrl(Constant.SERVER_ADDRESS)
+                .baseUrl(BaseConstant.SERVER_ADDRESS)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(initClient())
@@ -50,6 +62,11 @@ class RetrofitFactory private constructor(){
             interceptor.level = HttpLoggingInterceptor.Level.BODY
 
             return interceptor
+    }
+
+    fun <T> create(service:Class<T>):T{
+
+        return  retrofit.create(service)
     }
 
 
