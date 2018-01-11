@@ -14,7 +14,7 @@ import rx.schedulers.Schedulers
  */
 class RegisterPresenter: BasePresenter<RegisterView>() {
 
-    fun register(mobile:String ,verifyCode:String,pwd:String){
+    fun register(mobile:String ,pwd:String,verifyCode:String){
 
 
         var userService = UserServiceImpl()

@@ -8,7 +8,7 @@ class BaseConstant {
 
     companion object {
 
-        val SERVER_ADDRESS = ""
+        val SERVER_ADDRESS = "http://192.168.2.130:9090"
 
     }
 

@@ -18,6 +18,6 @@ open class RegisterActivity : BaseMvpActivity<RegisterPresenter>() ,RegisterView
         setContentView(R.layout.ac_register)
         mPresenter = RegisterPresenter()
         mPresenter.mView = this
-        mRegisterBtn.setOnClickListener{mPresenter.register("","","")}
+        mRegisterBtn.setOnClickListener{mPresenter.register(mPhone.text.toString(),mPassword.text.toString(),mVerigyCode.text.toString())}
     }
 }

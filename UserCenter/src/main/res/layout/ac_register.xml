@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/mPhone"
             android:hint="手机号码"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -31,6 +32,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/mVerigyCode"
             android:hint="验证码"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -47,6 +49,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/mPassword"
             android:hint="密码"
             android:layout_weight="1"
             android:layout_width="0dp"
