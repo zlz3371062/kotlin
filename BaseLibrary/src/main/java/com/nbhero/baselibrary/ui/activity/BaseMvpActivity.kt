@@ -2,6 +2,7 @@ package com.nbhero.baselibrary.ui.activity
 
 import com.nbhero.baselibrary.presenter.BasePresenter
 import com.nbhero.baselibrary.presenter.view.BaseView
+import javax.inject.Inject
 
 /**
  * Created by zlz on 2018/1/10.
@@ -16,5 +17,6 @@ open class BaseMvpActivity <T:BasePresenter<*>>: BaseActivity(),BaseView {
     override fun showLoading() {
     }
 
+    @Inject
     lateinit var mPresenter:T
 }
