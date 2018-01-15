@@ -10,7 +10,9 @@ import javax.inject.Inject
 open class BaseMvpActivity <T:BasePresenter<*>>: BaseActivity(),BaseView {
 
 
-    var data = listOf(1,2,3).map {  }
+    var data = listOf(1,2,3)
+
+    var zlz ="zlz"
 
     override fun hideLoading() {
     }
