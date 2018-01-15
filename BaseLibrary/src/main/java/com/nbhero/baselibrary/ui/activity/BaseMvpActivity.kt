@@ -16,7 +16,7 @@ open class BaseMvpActivity <T:BasePresenter<*>>: BaseActivity(),BaseView {
 
     var z = " 这是 我有名字的一版 "
 
-    var s = "我在这里增加了一个other分支"
+    var s = "我在这里增加一个other分支"
 
     override fun hideLoading() {
     }
