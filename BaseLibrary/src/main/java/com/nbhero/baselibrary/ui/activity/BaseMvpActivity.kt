@@ -8,6 +8,8 @@ import javax.inject.Inject
  * Created by zlz on 2018/1/10.
  */
 open class BaseMvpActivity <T:BasePresenter<*>>: BaseActivity(),BaseView {
+
+
     override fun hideLoading() {
     }
 
