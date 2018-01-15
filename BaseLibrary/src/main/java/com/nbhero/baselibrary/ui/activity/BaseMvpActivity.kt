@@ -16,7 +16,8 @@ open class BaseMvpActivity <T:BasePresenter<*>>: BaseActivity(),BaseView {
 
     var str = "发布版初始化"
 
-    var anther = " anther分支"
+    var 是 = "增加分支"
+
     override fun hideLoading() {
     }
 
