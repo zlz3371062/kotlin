@@ -14,6 +14,8 @@ open class BaseMvpActivity <T:BasePresenter<*>>: BaseActivity(),BaseView {
 
     var zlz ="zlz"
 
+    var z = " 这是 我有名字的一版"
+
     override fun hideLoading() {
     }
 
