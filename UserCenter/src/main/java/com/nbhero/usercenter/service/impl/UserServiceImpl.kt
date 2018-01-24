@@ -18,7 +18,6 @@ class UserServiceImpl @Inject constructor():UserService {
 
     override fun register(mobile: String, pwd: String, verifyCode: String): Observable<Boolean> {
 
-        var z = 1111
 
 
         return  repository.register(mobile,pwd,verifyCode)
