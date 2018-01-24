@@ -21,6 +21,7 @@ class UserServiceImpl @Inject constructor():UserService {
 
         var zlz = 1
 
+        var zlz2 = 2
         return  repository.register(mobile,pwd,verifyCode)
                 .flatMap(object :Func1<BaseResp<String>,Observable<Boolean>>{
                     override fun call(t: BaseResp<String>): Observable<Boolean> {
